@@ -46,7 +46,7 @@ class CameraFragment : Fragment() {
         val btnCamera: Button = binding.btnCamera
 
         btnCamera.setOnClickListener {
-            captureBarcode()
+//            captureBarcode()
             startCamera()
         }
         btnScan.setOnClickListener {
@@ -82,7 +82,7 @@ class CameraFragment : Fragment() {
             val preview = Preview.Builder()
                 .build()
                 .also {
-                    it.setSurfaceProvider(binding.textureView.surfaceProvider)
+                   // it.setSurfaceProvider(binding.textureView.surfaceProvider)
                 }
 
             imageCapture = ImageCapture.Builder()
@@ -93,9 +93,9 @@ class CameraFragment : Fragment() {
             try {
                 cameraProvider.unbindAll()
 
-                camera = cameraProvider.bindToLifecycle(
+           /*     camera = cameraProvider.bindToLifecycle(
                     this, cameraSelector, preview, imageCapture,
-                )
+                )*/
             } catch (exc: Exception) {
                 // Handle camera initialization error
             }
