@@ -22,4 +22,16 @@
         android:name="com.example.scanbite_v1_camera_function.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_login"
+        android:name="com.example.scanbite_v1_camera_function.ui.login.LoginFragment"
+        android:label="@string/menu_login"
+        tools:layout="@layout/activity_login" />
+
+    <fragment
+        android:id="@+id/nav_register"
+        android:name="com.example.scanbite_v1_camera_function.ui.singup.SignUpFragment"
+        android:label="@string/menu_register"
+        tools:layout="@layout/activity_signup" />
 </navigation>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "281509244155",
+    "project_id": "scanbite-v1-camera-function",
+    "storage_bucket": "scanbite-v1-camera-function.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:281509244155:android:db102c2c00618da029d45e",
+        "android_client_info": {
+          "package_name": "com.example.scanbite_v1_camera_function"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOSmv7Hyi07zq8e-y7sgojJnfras9kFXM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
