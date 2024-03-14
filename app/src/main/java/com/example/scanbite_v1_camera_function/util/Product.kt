@@ -30,14 +30,13 @@ import org.w3c.dom.Comment
             parentColumns = ["id"],
             childColumns = ["commentID"],
             onDelete = ForeignKey.CASCADE
-        ),
+        )
     ]
 )
 data class Product(
     @PrimaryKey(autoGenerate = true)
     val ID: Int? = null,
     val name: String,
-    val barcode: Int,
     val score: Int,
     val category: String,
     val description: String,
