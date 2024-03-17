@@ -48,7 +48,7 @@ class CameraFragment : Fragment() {
         codeScanner.decodeCallback = DecodeCallback {
             activity.runOnUiThread {
                 Toast.makeText(activity, it.text, Toast.LENGTH_LONG).show()
-              // tv_textView.text = it.text
+                // tv_textView.text = it.text
             }
         }
         scannerView.setOnClickListener {
