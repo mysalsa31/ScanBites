@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">ScanBite_V1_Camera_Function</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">LOGIN</string>
+    <string name="if_you_are_a_new_user">IF YOU ARE A NEW USER...</string>
+    <string name="create_an_account">CREATE AN ACCOUNT</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="loginsetup">Login</string>
+    <string name="menu_register">Register</string>
+    <string name="menu_review">Review</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_camera">Camera</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_login">Login</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="reviews">Reviews</string>
+    <string name="type_your_message_s">Type your message(s)...</string>
+</resources>
