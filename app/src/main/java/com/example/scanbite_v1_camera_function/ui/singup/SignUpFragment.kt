@@ -24,7 +24,7 @@ class SignUpFragment : Fragment() {
     private lateinit var auth: FirebaseAuth
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
-        return inflater.inflate(R.layout.activity_signup, container, false)
+        return inflater.inflate(R.layout.fragment_signup, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -33,8 +33,14 @@ class SignUpFragment : Fragment() {
 
         val loginText: TextView = view.findViewById(R.id.tvLoginNow)
         loginText.setOnClickListener {
-            val intent = Intent(requireActivity(), LoginFragment::class.java)
-            startActivity(intent)
+            // Perform fragment transaction here
+            val fragmentManager = parentFragmentManager
+            val fragmentTransaction = fragmentManager.beginTransaction()
+
+            val fragmentLoginFragment = LoginFragment()
+            fragmentTransaction.replace(R.id.frame_layout, fragmentLoginFragment )
+            fragmentTransaction.addToBackStack(null) // Optional: add to back stack
+            fragmentTransaction.commit()
         }
 
         val btnCreateAccount: Button = view.findViewById(R.id.btnCreateAccount)

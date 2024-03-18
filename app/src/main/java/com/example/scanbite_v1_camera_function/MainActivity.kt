@@ -11,44 +11,51 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.example.scanbite_v1_camera_function.databinding.ActivityMainBinding
+import com.example.scanbite_v1_camera_function.ui.gallery.CameraFragment
+import com.example.scanbite_v1_camera_function.ui.home.HomeFragment
+import com.example.scanbite_v1_camera_function.ui.login.LoginFragment
+import com.example.scanbite_v1_camera_function.ui.review.ReviewFragment
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        replaceFragment(CameraFragment())
 
-        setSupportActionBar(binding.appBarMain.toolbar)
+        binding.bottomNavigationView.setOnItemSelectedListener {
+
+            when(it.itemId){
+
+                R.id.scan -> replaceFragment(CameraFragment())
+                //    R.id.categories -> replaceFragment(CategoryFragment())
+                R.id.reviews -> replaceFragment(ReviewFragment())
+                //    R.id.favourites -> replaceFragment(FavouritesFragment())
+                R.id.login -> replaceFragment(LoginFragment())
+                else ->{
 
 
-        val drawerLayout: DrawerLayout = binding.drawerLayout
-        val navView: NavigationView = binding.navView
-        val navController = findNavController(R.id.nav_host_fragment_content_main)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.nav_home, R.id.nav_camera, R.id.nav_slideshow, R.id.nav_register, R.id.nav_login, R.id.nav_register
-            ), drawerLayout
-        )
-        setupActionBarWithNavController(navController, appBarConfiguration)
-        navView.setupWithNavController(navController)
+
+                }
+
+            }
+
+            true
+
+        }
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.main, menu)
-        return true
+    private fun replaceFragment(fragment : Fragment){
+
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.frame_layout,fragment)
+        fragmentTransaction.commit()
     }
 
-    override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment_content_main)
-        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
-    }
 }

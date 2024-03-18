@@ -21,7 +21,7 @@
         android:id="@+id/nav_camera"
         android:name="com.example.scanbite_v1_camera_function.ui.gallery.CameraFragment"
         android:label="@string/menu_camera"
-        tools:layout="@layout/activity_camera" />
+        tools:layout="@layout/fragment_camera" />
 
     <fragment
         android:id="@+id/nav_slideshow"
@@ -39,11 +39,19 @@
         android:id="@+id/nav_login"
         android:name="com.example.scanbite_v1_camera_function.ui.login.LoginFragment"
         android:label="@string/menu_login"
-        tools:layout="@layout/activity_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_nav_login_to_nav_register"
+            app:destination="@id/nav_register" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_register"
         android:name="com.example.scanbite_v1_camera_function.ui.singup.SignUpFragment"
         android:label="@string/menu_register"
-        tools:layout="@layout/activity_signup" />
+        tools:layout="@layout/fragment_signup" >
+        <action
+            android:id="@+id/action_nav_register_to_nav_login"
+            app:destination="@id/nav_login" />
+    </fragment>
 </navigation>
