@@ -17,6 +17,7 @@
     <string name="menu_register">Register</string>
     <string name="menu_review">Review</string>
 
+    <string name="menu_admin">Admin</string>
     <string name="menu_home">Home</string>
     <string name="menu_camera">Camera</string>
     <string name="menu_slideshow">Slideshow</string>
@@ -24,4 +25,20 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="reviews">Reviews</string>
     <string name="type_your_message_s">Type your message(s)...</string>
+    <string name="welcome_to_the_scanbite_application">Welcome To The ScanBite Application</string>
+    <string name="description">This application is supposed to scan items\' barcodes and show the nutritional value of the product. The value is going to be determined by a score of the product that is going to have an unbiased opinion on the brand. The customer can state their own experience and opinion on the product.</string>
+    <string name="developed_by">DEVELOPED BY:</string>
+    <string name="chritian_tichler">Chritian Tischer</string>
+    <string name="ethan_batch">Ethan Batch</string>
+    <string name="lalit_bhattarai">Lalit Bhattarai</string>
+    <string name="students_at_conestoga_college">Students At Conestoga College...</string>
+    <string name="welcome_to_the_admin_page">Welcome To The Admin Page</string>
+    <string name="admin_password">Admin Password</string>
+    <string name="login_admin">LOGIN ADMIN</string>
+    <string name="admin_email">Admin Email</string>
+    <string name="admin_menu">Admin</string>
+    <string name="products_menu">Products</string>
+    <string name="review_menu">Review</string>
+    <string name="login_menu">Login</string>
+    <string name="register_menu">Register</string>
 </resources>
