@@ -31,25 +31,20 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNavigationView.setOnItemSelectedListener {
 
             when(it.itemId){
-
+                //Home Page
+                R.id.home -> replaceFragment(HomeFragment())
+                //Scan
                 R.id.scan -> replaceFragment(CameraFragment())
                 //    R.id.categories -> replaceFragment(CategoryFragment())
                 R.id.reviews -> replaceFragment(ReviewFragment())
                 //    R.id.favourites -> replaceFragment(FavouritesFragment())
                 R.id.login -> replaceFragment(LoginFragment())
                 else ->{
-
-
-
                 }
-
             }
-
             true
-
         }
     }
-
     private fun replaceFragment(fragment : Fragment){
 
         val fragmentManager = supportFragmentManager
