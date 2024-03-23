@@ -93,7 +93,6 @@
                     android:layout_marginTop="15dp"
                     android:clickable="true"
                     android:focusable="true"
-                    android:onClick="goToRegister"
                     android:text="@string/create_an_account"
                     android:textColor="@color/blue"
                     android:textStyle="bold" />

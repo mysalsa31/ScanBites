@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:title="Home"
+    <item android:title="@string/home"
         android:id="@+id/home"
         android:icon="@drawable/home"/>
-    <item android:title="Scan"
+    <item android:title="@string/scan"
         android:id="@+id/scan"
         android:icon="@drawable/scan"/>
-    <item android:title="Favourites"
+    <item android:title="@string/favourites"
         android:id="@+id/favourites"
         android:icon="@drawable/favourite"/>
-    <item android:title="Reviews"
+    <item android:title="@string/reviewsss"
         android:id="@+id/reviews"
         android:icon="@drawable/review"/>
-    <item android:title="Setting"
+    <item android:title="@string/setting"
         android:id="@+id/setting"
         android:icon="@drawable/setting"/>
 </menu>
