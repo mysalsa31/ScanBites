@@ -12,6 +12,8 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.scanbite_v1_camera_function.MainActivity
 import com.example.scanbite_v1_camera_function.R
+import com.example.scanbite_v1_camera_function.databinding.ActivityMainBinding
+import com.example.scanbite_v1_camera_function.ui.home.HomeFragment
 import com.example.scanbite_v1_camera_function.ui.singup.SignUpFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -19,7 +21,7 @@ import com.google.firebase.ktx.Firebase
 
 
 class LoginFragment : Fragment() {
-
+    private lateinit var binding: ActivityMainBinding
     private lateinit var auth: FirebaseAuth
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -65,7 +67,7 @@ class LoginFragment : Fragment() {
         auth.signInWithEmailAndPassword(emailInput, passwordInput)
             .addOnCompleteListener(requireActivity()) { task ->
                 if (task.isSuccessful) {
-                    val intent = Intent(requireActivity(), MainActivity::class.java)
+                    val intent = Intent(requireActivity(), HomeFragment::class.java)
                     startActivity(intent)
                     Toast.makeText(requireActivity(), "Success.", Toast.LENGTH_SHORT).show()
                 } else {

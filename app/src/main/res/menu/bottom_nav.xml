@@ -12,7 +12,7 @@
     <item android:title="Reviews"
         android:id="@+id/reviews"
         android:icon="@drawable/review"/>
-    <item android:title="Login"
-        android:id="@+id/login"
-        android:icon="@drawable/account"/>
+    <item android:title="Setting"
+        android:id="@+id/setting"
+        android:icon="@drawable/setting"/>
 </menu>
