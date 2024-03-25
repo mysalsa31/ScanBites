@@ -3,6 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("com.google.gms.google-services")
     id("kotlin-kapt")
+    id("androidx.room") version("2.6.1") apply true
 }
 
 android {
@@ -18,7 +19,9 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
-
+    room{
+        schemaDirectory("sampledata/schemas")
+    }
     buildTypes {
         release {
             isMinifyEnabled = false

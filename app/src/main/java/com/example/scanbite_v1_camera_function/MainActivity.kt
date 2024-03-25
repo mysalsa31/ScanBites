@@ -20,6 +20,7 @@ import com.example.scanbite_v1_camera_function.ui.gallery.CameraFragment
 import com.example.scanbite_v1_camera_function.ui.home.HomeFragment
 import com.example.scanbite_v1_camera_function.ui.login.LoginFragment
 import com.example.scanbite_v1_camera_function.ui.review.ReviewFragment
+import com.example.scanbite_v1_camera_function.util.ScanBiteDb
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,10 +28,13 @@ class MainActivity : AppCompatActivity() {
 
     private val apiClient = MyApiClient()
 
+    private lateinit var appDb: ScanBiteDb
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        appDb = ScanBiteDb.getDatabase(this)
         replaceFragment(LoginFragment())
 
         // Example usage of API client

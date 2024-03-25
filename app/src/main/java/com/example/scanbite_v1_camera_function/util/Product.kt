@@ -1,12 +1,14 @@
 package com.example.scanbite_v1_camera_function.util
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
 import org.w3c.dom.Comment
 
 @Entity(
-    foreignKeys = [
+    tableName = "product_table",
+    /*foreignKeys = [
         ForeignKey(
             entity = FavoriteProduct::class,
             parentColumns = ["id"],
@@ -26,24 +28,24 @@ import org.w3c.dom.Comment
             onDelete = ForeignKey.CASCADE
         ),
         ForeignKey(
-            entity = Comment::class,
+            entity = ReviewData::class,
             parentColumns = ["id"],
-            childColumns = ["commentID"],
+            childColumns = ["reviewID"],
             onDelete = ForeignKey.CASCADE
         )
-    ]
+    ]*/
 )
 data class Product(
     @PrimaryKey(autoGenerate = true)
-    val ID: Int? = null,
-    val name: String,
-    val score: Int,
-    val category: String,
-    val description: String,
-    val price: Double,
-    val manufacturer: String,
-    val favoriteProductID: Int,
-    val adminID: Int,
-    val barcodeID:Int,
-    val commentID:Int
+    val id: Int? = null,
+    @ColumnInfo(name = "name") val name: String,
+    @ColumnInfo(name = "score")val score: Int,
+    @ColumnInfo(name = "category")val category: String,
+    @ColumnInfo(name = "description")val description: String,
+    @ColumnInfo(name = "price")val price: String,
+    @ColumnInfo(name = "manufacturer")val manufacturer: String,
+    @ColumnInfo(name = "favoriteProductID")val favoriteProductID: Int,
+    @ColumnInfo(name = "adminID")val adminID: Int,
+    @ColumnInfo(name = "barcodeID")val barcodeID:Int,
+    @ColumnInfo(name = "reviewID")val reviewID:Int
 )
