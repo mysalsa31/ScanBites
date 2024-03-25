@@ -12,7 +12,7 @@ import androidx.room.Query
 
 @Dao
 interface AccountDao {
-
+/*
     //there is an upsert function which update an existing ,
     // but we need insert.
     @Insert
@@ -20,6 +20,7 @@ interface AccountDao {
 
     @Delete
     suspend fun deleteContact(account: Account)
+
 
     @Query("SELECT * FROM account ORDER BY firstName ASC")
     fun getAccountOrderedByFirstName(): LiveData<List<Account>>
@@ -30,5 +31,5 @@ interface AccountDao {
     @Query("SELECT * FROM account ORDER BY phoneNumber ASC")
     fun getAccountOrderedByPhoneNumber(): LiveData<List<Account>>
 
-
+*/
 }

@@ -47,6 +47,7 @@ dependencies {
 
     // this is a string showing the latest room version currently
     val room_version = ("2.6.1")
+    val supabase_version = ("1.9.23")
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")
@@ -66,6 +67,11 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
     //external implementation
+
+    //supabase module for postgrest Database relations
+    implementation("io.github.jan-tennert.supabase:postgrest-kt:$supabase_version")
+    //Ktor Client needed for supabase
+    implementation("io.ktor:ktor-client-android:2.3.9")
 
     //Retrofit dependency
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
