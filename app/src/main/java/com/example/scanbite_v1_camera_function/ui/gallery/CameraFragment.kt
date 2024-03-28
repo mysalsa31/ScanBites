@@ -23,8 +23,6 @@ private const val CAMERA_REQUEST_CODE = 101
 
 class CameraFragment : Fragment() {
 
-
-
     private lateinit var tv_textView: TextView
     private lateinit var codeScanner: CodeScanner
 
