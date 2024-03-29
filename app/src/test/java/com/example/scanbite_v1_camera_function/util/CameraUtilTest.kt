@@ -17,7 +17,7 @@ class CameraUtilTest{
             "Mondelēz International",
 
         )
-        assertThat(result).isNotNull()
+        assertThat(result).isTrue()
     }
 
     @Test

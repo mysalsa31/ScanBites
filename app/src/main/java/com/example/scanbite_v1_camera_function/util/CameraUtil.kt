@@ -14,11 +14,9 @@ object CameraUtil {
         price: Double,
         manufacturer: String,
 
-
-
-
     ): Boolean{
-        return true
+        // if barcodeID is less or equal to 0 (invalid barcode) it returns false
+        return barcodeID > 0
     }
 
 }

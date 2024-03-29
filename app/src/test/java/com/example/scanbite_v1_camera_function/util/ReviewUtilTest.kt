@@ -8,17 +8,30 @@ class ReviewUtilTest{
     fun `Added review returns true`(){
         val result = ReviewUtil.validateReview(
             1,
-            "very good"
+            "very good",
+            false,
         )
-        assertThat(result).isNotNull()
+        assertThat(result).isTrue()
     }
 
     @Test
     fun `Deleted review returns null`(){
         val result = ReviewUtil.validateReview(
             1,
-            "very good"
+            "very good",
+            true
         )
-        assertThat(result).isNull()
+        assertThat(result).isFalse()
+    }
+
+    @Test
+    fun `review longer than 250 characters returns false`(){
+        val result = ReviewUtil.validateReview(
+            1,
+            "Ritz crackers are a timeless classic! Their buttery, flaky texture and subtle saltiness make them irresistible. Whether enjoyed on their own or paired " +
+                    "with cheese or dips, they never disappoint. Perfect for snacking or adding a crunchy touch to any dish. A pantry staple for sure!",
+            false
+        )
+        assertThat(result).isFalse()
     }
 }
