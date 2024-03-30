@@ -1,4 +1,4 @@
-package com.example.scanbite_v1_camera_function.ui.gallery
+package com.example.scanbite_v1_camera_function.ui.camera
 
 
 import android.content.pm.PackageManager
@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
@@ -18,6 +19,7 @@ import com.budiyev.android.codescanner.DecodeCallback
 import com.budiyev.android.codescanner.ScanMode
 
 import com.example.scanbite_v1_camera_function.R
+import com.example.scanbite_v1_camera_function.ui.productDetail.ProductDetailFragment
 
 private const val CAMERA_REQUEST_CODE = 101
 
@@ -36,6 +38,9 @@ class CameraFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val scannerView = view.findViewById<CodeScannerView>(R.id.scanner_view)
         val activity = requireActivity()
+        val btnProductDetail: Button = view. findViewById(R.id.btnProductDetail)
+
+        
         setupPermissions()
         codeScanner = CodeScanner(activity, scannerView)
         codeScanner.apply {
@@ -54,6 +59,17 @@ class CameraFragment : Fragment() {
         scannerView.setOnClickListener {
             codeScanner.startPreview()
         }
+        //event listener to navigate to product detail page
+        btnProductDetail.setOnClickListener {
+            val fragmentManager = parentFragmentManager
+            val fragmentTransaction = fragmentManager.beginTransaction()
+
+            val fragmentProductDetail = ProductDetailFragment ()
+            fragmentTransaction.replace(R.id.frame_layout, fragmentProductDetail)
+            fragmentTransaction.addToBackStack(null)
+            fragmentTransaction.commit()
+        }
+
     }
 
     override fun onResume() {

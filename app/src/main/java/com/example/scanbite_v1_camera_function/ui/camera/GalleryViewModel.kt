@@ -1,4 +1,4 @@
-package com.example.scanbite_v1_camera_function.ui.gallery
+package com.example.scanbite_v1_camera_function.ui.camera
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

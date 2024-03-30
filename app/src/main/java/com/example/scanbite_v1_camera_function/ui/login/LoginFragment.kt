@@ -1,4 +1,4 @@
-package com.example.scanbite_v1_camera_function.ui.login;
+package com.example.scanbite_v1_camera_function.ui.login
 
 import android.content.Intent
 import android.os.Bundle

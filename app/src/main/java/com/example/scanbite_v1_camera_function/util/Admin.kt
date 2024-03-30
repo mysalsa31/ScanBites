@@ -8,14 +8,14 @@ import java.util.Date
 
 @Entity(
     tableName = "admin_table",
-    foreignKeys = [
+    /*foreignKeys = [
         ForeignKey(
             entity = Product::class,
             parentColumns = ["id"],
             childColumns = ["productID"],
             onDelete = ForeignKey.CASCADE
         )
-    ]
+    ]*/
 )
 data class Admin(
     @PrimaryKey(autoGenerate = true)

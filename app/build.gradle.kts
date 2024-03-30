@@ -4,6 +4,9 @@ plugins {
     id("com.google.gms.google-services")
     id("kotlin-kapt")
     id("androidx.room") version("2.6.1") apply true
+
+
+
 }
 
 android {
@@ -36,8 +39,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "1.8"
-    }
+        jvmTarget = "1.8"    }
     buildFeatures {
         viewBinding = true
     }
@@ -47,7 +49,8 @@ dependencies {
 
     // this is a string showing the latest room version currently
     val room_version = ("2.6.1")
-    val supabase_version = ("1.9.23")
+    val supabase_version = ("2.0.0")
+    val ktor_version = ("2.3.9")
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")
@@ -71,8 +74,9 @@ dependencies {
     //supabase module for postgrest Database relations
     implementation("io.github.jan-tennert.supabase:postgrest-kt:$supabase_version")
     //Ktor Client needed for supabase
-    implementation("io.ktor:ktor-client-android:2.3.9")
-
+    implementation("io.ktor:ktor-client-android:$ktor_version")
+    //serialization plugin
+    implementation ("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
     //Retrofit dependency
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
