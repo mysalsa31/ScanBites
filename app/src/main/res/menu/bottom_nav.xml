@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:title="@string/home"
+    <item android:title="Home"
         android:id="@+id/home"
         android:icon="@drawable/home"/>
-    <item android:title="@string/scan"
-        android:id="@+id/scan"
+    <item android:title="Scan"
+        android:id="@+id/scanBarcode"
         android:icon="@drawable/scan"/>
     <item android:title="@string/favourites"
         android:id="@+id/favourites"

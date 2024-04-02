@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
                 //Home Page
                 R.id.home -> replaceFragment(HomeFragment())
                 //Scan
-                R.id.scan -> replaceFragment(CameraFragment())
+                R.id.scanBarcode -> replaceFragment(CameraFragment())
                 //    R.id.categories -> replaceFragment(CategoryFragment())
                 R.id.reviews -> replaceFragment(ReviewFragment())
                 //    R.id.favourites -> replaceFragment(FavouritesFragment())
