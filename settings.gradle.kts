@@ -19,4 +19,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "ScanBite_V1_Camera_Function"
 include(":app")
- 
+include(":app:benchmark")

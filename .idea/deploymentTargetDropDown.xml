@@ -2,10 +2,10 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
-      <entry key="NavigationTest">
+      <entry key="ExampleStartupBenchmark">
         <State />
       </entry>
-      <entry key="NavigationTest (1)">
+      <entry key="NavigationTest">
         <State />
       </entry>
       <entry key="app">
@@ -28,9 +28,6 @@
         <State />
       </entry>
       <entry key="testHomeFragmentNavigation()">
-        <State />
-      </entry>
-      <entry key="testReviewFragmentNavigation()">
         <State />
       </entry>
     </value>
