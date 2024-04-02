@@ -5,11 +5,11 @@ import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
 
 @Entity(
-
+    tableName = "favoriteProduct_table"
 )
 data class FavoriteProduct(
     @PrimaryKey(autoGenerate = true)
-    val ID: Int? = null,
+    val id: Int? = null,
     val productName: String,
 
 

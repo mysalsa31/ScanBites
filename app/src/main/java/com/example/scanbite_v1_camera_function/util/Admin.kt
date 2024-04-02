@@ -1,31 +1,33 @@
 package com.example.scanbite_v1_camera_function.util
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
 import java.util.Date
 
 @Entity(
-    foreignKeys = [
+    tableName = "admin_table",
+    /*foreignKeys = [
         ForeignKey(
             entity = Product::class,
             parentColumns = ["id"],
-            childColumns = ["ProductID"],
+            childColumns = ["productID"],
             onDelete = ForeignKey.CASCADE
         )
-    ]
+    ]*/
 )
 data class Admin(
     @PrimaryKey(autoGenerate = true)
-    val ID: Int = 0,
-    val firstName: String,
-    val lastName: String,
-    val email: Char,
-    val password: Char,
-    val phoneNumber: Number,
-    val address: String,
-    val province: String,
-    val role: String,
-    val creationDate: Date,
-    val ProductID: Int
+    val id: Int = 0,
+    @ColumnInfo(name = "first_name") val firstName: String,
+    @ColumnInfo(name = "last_name") val lastName: String,
+    @ColumnInfo(name = "email")val email: Char,
+    @ColumnInfo(name = "password")val password: Char,
+    @ColumnInfo(name = "phoneNumber")val phoneNumber: String,
+    @ColumnInfo(name = "address")val address: String,
+    @ColumnInfo(name = "province")val province: String,
+    @ColumnInfo(name = "role")val role: String,
+    //@ColumnInfo(name = "creationDate")val creationDate: Date,
+    @ColumnInfo(name = "productID")val productID: Int
 )

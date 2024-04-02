@@ -19,9 +19,21 @@
 
     <fragment
         android:id="@+id/nav_camera"
-        android:name="com.example.scanbite_v1_camera_function.ui.gallery.CameraFragment"
+        android:name="com.example.scanbite_v1_camera_function.ui.camera.CameraFragment"
         android:label="@string/menu_camera"
-        tools:layout="@layout/fragment_camera" />
+        tools:layout="@layout/fragment_camera">
+        <action
+        android:id="@+id/action_nav_get_productDetail"
+        app:destination="@id/nav_productDetail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_productDetail"
+        android:name="com.example.scanbite_v1_camera_function.ui.productDetail.ProductDetailFragment"
+        android:label="@string/products_menu"
+        tools:layout="@layout/fragment_productdetails">
+
+    </fragment>
 
     <fragment
         android:id="@+id/nav_slideshow"

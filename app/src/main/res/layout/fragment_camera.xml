@@ -24,16 +24,18 @@
       app:frameVerticalBias="0.5"
       app:maskColor="#77000000" />
 
-  <TextView
-      android:id="@+id/tv_textView"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_below="@+id/scanner_view"
-      android:layout_centerHorizontal="true"
-      android:layout_marginStart="20dp"
-      android:layout_marginTop="20dp"
-      android:layout_marginEnd="20dp"
-      android:layout_marginBottom="20dp"
-      android:text="Scan something..."
-      android:textColor="@android:color/black" />
+  <Button
+      android:id="@+id/btnProductDetail"
+      android:layout_width="230dp"
+      android:layout_height="197dp"
+      android:layout_alignParentStart="true"
+      android:layout_alignParentTop="true"
+      android:layout_alignParentEnd="true"
+      android:layout_alignParentBottom="true"
+      android:layout_marginStart="96dp"
+      android:layout_marginTop="452dp"
+      android:layout_marginEnd="85dp"
+      android:layout_marginBottom="81dp"
+      android:text="@string/confirm_barcode"
+      android:textColor="@color/black" />
 </RelativeLayout>

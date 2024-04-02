@@ -6,39 +6,30 @@ import androidx.room.Transaction
 import androidx.room.Upsert
 import kotlinx.coroutines.flow.Flow
 
+
 @Dao
 interface ScanBiteDao {
-    @Upsert
-    suspend fun insertProduct(product: Product)
-    @Upsert
-    suspend fun insertAdmin(admin: Admin)
-    @Upsert
-    suspend fun insertBarcode(barcode: Barcode)
-    @Upsert
-    suspend fun insertCategory(category: Category)
-    @Upsert
-    suspend fun insertAccount(account: Account)
 
-    @Transaction
-    @Query("SELECT * FROM account ORDER BY lastName")
-    fun getAccountOrderedByPhoneNumber(): Flow<List<Account>>
+/*    @Query("SELECT p.id, p.name, p.score, p.description, p.price, p.manufacturer FROM product_table p" +
+            "JOIN barcode_table b ON p.id = b.productId" +
+            ":barcodeNumber = (SELECT REGEXP_SUBSTR(MessageText, '\\[([0-9]+)\\]', 1, 1, NULL, 1) FROM ToastMessage);" +
+            "b.BarcodeNumber = :barcodeNumber  ")
+    fun loadProductTableFromBarcode(barcodeNumber: String) : List<Product>*/
 
-    @Transaction
-    @Query("SELECT * FROM product ORDER BY name")
-    fun getAllProducts(): Flow<List<Product>>
-    @Transaction
-    @Query("SELECT * FROM admin ORDER BY lastName")
-    fun getAllAdmin(): Flow<List<Product>>
+    //This query isn't added into the migration
+   /* @Query("SELECT p.id, p.name, p.score, p.description, p.price, p.manufacturer " +
+            "FROM product_table p " +
+            "JOIN barcode_table b ON p.barcodeID = b.id " +
+            "WHERE b.barcodeNumber = :barcodeNumber")
+    fun loadProductTableFromBarcode(barcodeNumber: String): List<Product>
+*/
 
-    @Transaction
-    @Query("SELECT * FROM product WHERE barcodeID= :barcodeID")
-    fun getProductWithBarcode(barcodeID: Int): Product?
+    //This query is pull the reviewId of each product
 
-    @Transaction
-    @Query("SELECT * FROM favoriteProduct WHERE ID= :favoriteProductID")
-    fun getFavoriteProduct(favoriteProductID: Int): Product?
-
-
+/*
+    @Query("")
+    fun loadProductReviewById()
+*/
 
 
 
